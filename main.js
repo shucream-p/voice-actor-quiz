@@ -7,8 +7,9 @@ class VoiceActorQuiz {
   }
 
   async start () {
-    for (let i = 0; i < data.length; i++) {
-      await this.giveQuiz(data[i])
+    const quizzes = this.quizzesShuffle(data)
+    for (let i = 0; i < quizzes.length; i++) {
+      await this.giveQuiz(quizzes[i])
     }
     console.log(`結果は${this.point}点でした。`)
     console.log('お疲れ様でした。')
@@ -23,6 +24,14 @@ class VoiceActorQuiz {
     } else {
       console.log(`不正解！ 正解は「${answer.correctAnswer}」です。担当声優は${prompt.actor}さんです。\n`)
     }
+  }
+
+  quizzesShuffle (data) {
+    for (let i = data.length - 1; i >= 0; i--) {
+      const r = Math.floor(Math.random() * (i + 1));
+      [data[i], data[r]] = [data[r], data[i]]
+    }
+    return data
   }
 }
 
