@@ -12,7 +12,7 @@ class VoiceActorQuiz {
     console.log(firstMessage)
     const quizzes = await this.#quizzesShuffle()
 
-    for (let i = 0; i < quizzes.length; i++) {
+    for (let i = 0; i < 10; i++) {
       await this.#giveQuiz(quizzes[i])
     }
     console.log(`結果は${this.point}点でした。`)
