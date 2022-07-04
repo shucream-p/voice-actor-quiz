@@ -27,10 +27,8 @@ class VoiceActorQuiz {
   async #getQuizzes () {
     const level = await this.#selectLevel()
 
-    if (level === '初級') {
+    if (level === '一般向け') {
       return data.beginner
-    } else if (level === '中級') {
-      return data.intermediate
     } else {
       return data.advenced
     }
@@ -40,7 +38,7 @@ class VoiceActorQuiz {
     const prompt = new Select({
       name: 'level',
       message: '難易度を選んでね。',
-      choices: ['初級', '中級', '上級']
+      choices: ['一般向け', 'オタク向け']
     })
     return await prompt.run()
   }
