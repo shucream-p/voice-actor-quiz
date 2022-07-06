@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const { Select } = require('enquirer')
 const { Quiz } = require('enquirer')
 const data = require('./data.js')
