@@ -13,6 +13,11 @@
     "type": "git",
     "url": "git+https://github.com/shucream-p/voice-actor-quiz.git"
   },
+  "keywords": [
+    "voiceactor",
+    "anime",
+    "quiz"
+  ],
   "author": "shucream",
   "license": "ISC",
   "bugs": {
