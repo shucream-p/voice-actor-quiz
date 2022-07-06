@@ -2,7 +2,10 @@
   "name": "voice-actor-quiz",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
+  "bin": {
+    "voice-actor-quiz": "./main.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/shucream-p/voice-actor-quiz.git"
   },
-  "author": "",
+  "author": "shucream",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/shucream-p/voice-actor-quiz/issues"
